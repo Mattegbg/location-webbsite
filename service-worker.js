@@ -36,7 +36,7 @@ self.addEventListener('fetch', async (event) => {
     }
 });
 
-async function uodateCache(request) {
+async function updateCache(request) {
     const response = await fetch(request);
     const cache = await cache.open('v1'); // öppnar cachen
 
