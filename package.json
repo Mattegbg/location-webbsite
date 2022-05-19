@@ -1,7 +1,7 @@
 {
   "name": "lektion-11-maj-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Make a webbsite that can find your location. School project 11/05/2022 - Jensen Yrkeshögskola",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,6 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "https-localhost": "^4.7.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattegbg/location-webbsite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mattegbg/location-webbsite/issues"
+  },
+  "homepage": "https://github.com/Mattegbg/location-webbsite#readme"
 }
-
