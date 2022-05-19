@@ -31,14 +31,14 @@ self.addEventListener('fetch', async (event) => {
         )
     }else {
         console.log('Online')
-        const res = await updateCache(event.req);
-        return res;
+        const response = await updateCache(event.request);
+        return response;
     }
 });
 
 async function updateCache(request) {
     const response = await fetch(request);
-    const cache = await cache.open('v1'); // öppnar cachen
+    const cache = await caches.open('v1'); // öppnar cachen
 
     cache.put(request, response.clone()); // klonar och skickar en kopia
 

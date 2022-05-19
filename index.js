@@ -6,6 +6,22 @@ const buttonElem = document.querySelector('#position-button');
 let stopsList = document.getElementById('stops');
 var clickedStop = ''
 var departuresList = document.getElementById('departures');
+let videoElem = document.querySelector('#camera');
+let startCamera = document.querySelector('#start-camera');
+
+
+//Starta kameran
+ startCamera.addEventListener('click', async () =>  {
+    videoElem.style.display = '';
+    console.log(navigator);
+    if ('mediaDevices' in navigator) {
+        const devices = await navigator.mediaDevices.enumerateDevices()
+        console.log(devices);
+        stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false});
+        videoElem.srcObject = stream;
+    }
+
+ });
 
 
 function showOnMap(position) {
